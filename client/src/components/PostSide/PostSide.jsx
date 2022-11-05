@@ -4,7 +4,7 @@ import './PostSide.css'
 const PostSide = () => {
   return (
    <div className="PostSide">
-       PostSide
+       New area
    </div>
   )
 }
