@@ -19,7 +19,7 @@
 .App{
   overflow: hidden;
   color: var(--black);
-  background: #d8d5d5;
+  background: #f3f3f3;
   /* background: linear-gradient(180deg, #DC3545 26.71%, #FF6456 99.36%);  */
   padding: 1rem 1rem;
 }
