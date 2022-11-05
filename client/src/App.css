@@ -52,3 +52,7 @@
   background: transparent;
   border: 2px solid var(--pink);
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
