@@ -53,6 +53,11 @@
   border: 2px solid var(--pink);
 }
 
+.button:disabled {
+  background: silver;
+  pointer-events: none;
+}
+
 ::-webkit-scrollbar{
   display: none;
 }
