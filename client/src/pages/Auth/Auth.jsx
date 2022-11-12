@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import "./Auth.css";
 import Logo from "../../img/logo.png";
+import { logIn, signUp } from "../../actions/AuthAction.js";
+import { useDispatch, useSelector } from "react-redux";
 
 const Auth = () => {
-  const [isSignUp, setIsSignUp] = useState(true);
 
-  const [data, setData] = useState({
+  const initialState = {
     firstname: "",
     lastname: "",
+    username: "",
     password: "",
     confirmpass: "",
-    username: "",
-  });
+  };
+
+  const dispatch = useDispatch();
+
+  const [isSignUp, setIsSignUp] = useState(true);
+
+  const [data, setData] = useState(initialState);
 
   const [confirmPass, setConfirmPass] = useState(true);
 
@@ -25,22 +32,18 @@ const Auth = () => {
     e.preventDefault();
 
     if (isSignUp) {
-      if (data.password !== data.confirmpass) {
-        setConfirmPass(false);
-      }
+      data.password === data.confirmpass
+        ? dispatch(signUp(data))
+        : setConfirmPass(false);
+    } else {
+      dispatch(logIn(data));
     }
   };
 
   // Reset Form
   const resetForm = () => {
     setConfirmPass(true);
-    setData({
-      firstname: "",
-      lastname: "",
-      password: "",
-      confirmpass: "",
-      username: "",
-    });
+    setData(initialState);
   };
 
   return (
