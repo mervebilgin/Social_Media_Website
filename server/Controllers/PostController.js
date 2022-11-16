@@ -8,14 +8,13 @@ export const createPost = async (req, res) => {
 
   try {
     await newPost.save();
-    res.status(200).json("Post created!");
+    res.status(200).json(newPost);
   } catch (error) {
     res.status(500).json(error);
   }
 };
 
 // Get a post
-
 export const getPost = async (req, res) => {
   const id = req.params.id;
 
@@ -82,7 +81,7 @@ export const likePost = async (req, res) => {
   }
 };
 
-// Get Timeline POsts
+// Get Timeline Posts
 export const getTimelinePosts = async (req, res) => {
   const userId = req.params.id;
 
