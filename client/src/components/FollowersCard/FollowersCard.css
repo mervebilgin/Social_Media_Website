@@ -44,6 +44,19 @@
     padding-right: 20px;
 }
 
+.UnfollowButton{
+    color: var(--pink);
+    border: 2px solid var(--pink);
+    cursor: pointer;
+    background: transparent;
+}
+
+.FollowersCard>span{
+    font-weight: bold;
+    color: var(--pink);
+    align-self: center;
+    cursor: pointer;
+}
 
 
 
