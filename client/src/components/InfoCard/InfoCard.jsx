@@ -47,6 +47,7 @@ const InfoCard = () => {
           <ProfileModal
             modalOpened={modalOpened}
             setModalOpened={setModalOpened}
+            data = {user}
           />
         </div>
         ) : (
@@ -73,7 +74,7 @@ const InfoCard = () => {
         <span>
           <b>Works in </b>
         </span>
-        <span>{profileUser.worksAt}</span>
+        <span>{profileUser.relationship}</span>
       </div>
 
       <button className="button logout-button" onClick={handleLogOut} >Logout</button>
