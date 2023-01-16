@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 
 // Registering a new User
 export const registerUser = async (req, res) => {
+  // Bu yöntemde parolaları hash’lemeden önce salt (tuz) adı verilen rastgele bir 
+  // metin parolanın başına ya da sonuna ekleyerek bu değerin hash’lenmesinin sağlanmasıdır.
   const salt = await bcrypt.genSalt(10);
   const hashedPass = await bcrypt.hash(req.body.password, salt);
   req.body.password = hashedPass;

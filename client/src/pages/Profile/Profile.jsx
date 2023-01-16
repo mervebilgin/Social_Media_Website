@@ -5,7 +5,7 @@ import ProfileLeft from '../../components/ProfileLeft/ProfileLeft'
 import RightSide from '../../components/RightSide/RightSide'
 import './Profile.css'
 
-export default function Profile() {
+const Profile = () => {
   return (
     <div className="Profile">
         <ProfileLeft/>
@@ -19,4 +19,6 @@ export default function Profile() {
     </div>
   )
 }
+
+export default Profile
 

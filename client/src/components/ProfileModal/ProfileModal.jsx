@@ -83,7 +83,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
             name="firstName"
             placeholder="First Name"
             onChange={handleChange}
-            value = {formData.firstName}
+            value = {formData.firstname}
           />
 
           <input
@@ -92,7 +92,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
             name="lastName"
             placeholder="Last Name"
             onChange={handleChange}
-            value = {formData.lastName}
+            value = {formData.lastname}
           />
         </div>
 
@@ -100,10 +100,10 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
           <input
             type="text"
             className="infoInput"
-            name="studyingAt"
-            placeholder="Studying at"
+            name="worksAt"
+            placeholder="Works at"
             onChange={handleChange}
-            value = {formData.studyingAt}
+            value = {formData.worksAt}
           />
         </div>
 
@@ -131,7 +131,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
           <input
             type="text"
             className="infoInput"
-            placeholder="Works at"
+            placeholder="Relationship Status"
             name= "relationship"
             onChange={handleChange}
             value = {formData.relationship}

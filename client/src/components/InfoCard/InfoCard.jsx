@@ -19,11 +19,12 @@ const InfoCard = () => {
     const fetchProfileUser = async () => {
       if (profileUserId === user._id) {
         setProfileUser(user);
+      
       } else {
         console.log("fetching")
         const profileUser = await UserApi.getUser(profileUserId);
         setProfileUser(profileUser);
-        console.log(profileUser)
+        // console.log(profileUser)
       }
     };
     fetchProfileUser();
@@ -58,7 +59,7 @@ const InfoCard = () => {
 
       <div className="info">
         <span>
-          <b>Studying at </b>
+          <b>Status </b>
         </span>
         <span>{profileUser.relationship}</span>
       </div>
@@ -72,9 +73,9 @@ const InfoCard = () => {
 
       <div className="info">
         <span>
-          <b>Works in </b>
+          <b>Works at </b>
         </span>
-        <span>{profileUser.relationship}</span>
+        <span>{profileUser.worksAt}</span>
       </div>
 
       <button className="button logout-button" onClick={handleLogOut} >Logout</button>
